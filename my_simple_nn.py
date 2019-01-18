@@ -23,7 +23,6 @@ Created on Thu Jan 17 10:38:08 2019
 from numpy import *
 
 
-
 class my_nn():
     
     def __init__(self):
