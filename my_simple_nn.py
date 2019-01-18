@@ -10,9 +10,9 @@ Created on Thu Jan 17 10:38:08 2019
 # input and output table
 #   Input1 Input2   Input3  Output
 #   0      0       1        0
-#   0      1       1        1
+#   1      1       1        1
 #   1      0       1        1
-#   1      1       1        0
+#   0      1       1        0
 
 
 # Test Input after training
@@ -21,6 +21,8 @@ Created on Thu Jan 17 10:38:08 2019
 
 #Importing Libraries
 from numpy import *
+
+
 
 class my_nn():
     
@@ -68,27 +70,26 @@ class my_nn():
         return self.my_sig(dot(inputs,self.my_w1))
             
             
-if __name__ == "main":
+
+#Create an object of our NN
+my_nn = my_nn()
     
-    #Create an object of our NN
-    my_nn = my_nn()
+print("The initial random weights of W1 (3x1) is :")
+print(my_nn.my_w1)
     
-    print("The initial random weights of W1 (3x1) is :")
-    print(my_nn.my_w1)
+#Create the array according to the truth table you want to train
+train_inputs = array([[0,0,1],[1,1,1],[1,0,1],[0,1,1]])
+train_outputs = array([[0,1,1,0]]).T
     
-    #Create the array according to the truth table you want to train
-    train_inputs = array([[0,0,1],[1,1,1],[1,0,1],[0,1,1]])
-    train_outputs = array([[0,1,1,0]]).T
+#Train the neural network with the inputs and outputs 
+my_nn.my_nn_train(train_inputs,train_outputs,100000)
     
-    #Train the neural network with the inputs and outputs 
-    my_nn.my_nn_train(train_inputs,train_outputs,100000)
+print("Weights W1 after training")
+print(my_nn.my_w1)
     
-    print("Weights W1 after training")
-    print(my_nn.my_w1)
-    
-    test_input = array([1,0,0])
-    print("Prediction made on the new input")
-    print(my_nn.my_nn_predict(test_input))
+test_input = array([1,0,0])
+print("Prediction made on the new input")
+print(my_nn.my_nn_predict(test_input))
     
 
 
