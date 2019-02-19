@@ -14,8 +14,6 @@ Starting Point(just a suggestion) :
 I would first recommend to begin with the deep learning course on coursera by Andrew .N.G 
 This would cover all the basics which you require.
 
-I would also highly recommend reading through the materials in this course : http://cs231n.github.io/
-
 Assuming that you have some understanding of a basic neuron and a single neuron network, The next step would be to
 try implementing a neural network on your own using just basic libraries. This following blog by adam trask will be 
 very helpful to you in this regard: https://iamtrask.github.io/2015/07/12/basic-python-network/
@@ -25,3 +23,4 @@ Even though CNNs were first successfully implemented by Yan Le Cun in the 90s fo
 popular only in 2012(built by Alex Krizhevsky and team) convincingly beat all the previous models used in the ImageNet competition by dropping the classification error from 26% to 15%. If you are one of those nerds who likes to read research papers, here is a list of papers of historic importance in the field of deep learning in the chronological order.
 https://docs.google.com/spreadsheets/d/1kZqCg5qS9MM4LoEHfIb2fLgf4IymXGOyXC9MBPSatuA/edit#gid=0
 
+I would also highly recommend reading through the materials in this course on CNN: http://cs231n.github.io/
